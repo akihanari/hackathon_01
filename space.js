@@ -2,16 +2,15 @@ let x,y;
 let w;
 let img;
 let h,s,b;
+let button;
 //let count = 0;
 //let fr = 30; //fps
 
-function preload() {
-  img = loadImage('images/cat02.png');
-}
 
 function setup() {
 //   createCanvas(400,400);
-  createCanvas(windowWidth, windowHeight);
+
+  let c = createCanvas(windowWidth, windowHeight);
 
 //   background(0,4,51);
   background(0);
@@ -42,17 +41,24 @@ function setup() {
   }
   blendMode(BLEND);
   colorMode(RGB);
-  image(img,windowWidth/2,windowHeight - 406);
+
+  loadImage('images/cat02.png', img => {
+    image(img, windowWidth/2,windowHeight - 406);
+  });
+
 //   filter(BLUR, 0);
+  button = createButton("Save");
+  button.mousePressed(saveme);
+
 }
 
 function draw() {
-  //background(0,4,51);
-  //stroke(255);
-  //x = random(0,400);
-  //y = random(0,400);
-  //if (count % 2 == 0) {
-  //  point(x, y);
-  //}
-  //count++;
+    // if (button.mousePressed()) {
+    //     saveCanvas('spacecat');
+    //   }
+    // button.mousePressed(saveCanvas('spacecat'));
+}
+
+function saveme() {
+    saveCanvas('spacecat');
 }
