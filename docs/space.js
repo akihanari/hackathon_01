@@ -48,7 +48,7 @@ function setup() {
   colorMode(RGB);
 
   loadImage('images/cat02.png', img => {
-    image(img, windowWidth/2,windowHeight - 406);
+    image(img, 0,windowHeight - 406);
   });
 
 //   filter(BLUR, 0);
