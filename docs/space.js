@@ -38,7 +38,7 @@ function setup() {
   blendMode(BLEND);
   colorMode(RGB);
 
-  loadImage('images/spacecat.png', img => {
+  loadImage('images/0103.png', img => {
     image(img, 0,windowHeight - 406);
   });
 
