@@ -86,8 +86,8 @@ function deviceShaken() {
   // if (value > 255) {
   //   value = 0;
   // }
-  let m = random(0,windowWidth);
-  let n = random(0,windowHeight);
+  let m = 50;
+  let n = 200;
   for (k=0; k< windowHeight; k++){
     fill(255, 255, 255);
     ellipse((m++)%width,(n+=6)%width,5,5);
