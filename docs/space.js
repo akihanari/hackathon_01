@@ -89,6 +89,7 @@ function deviceShaken() {
   let m = 50;
   let n = 200;
   for (k=0; k< windowHeight; k++){
+    background(225);
     fill(255, 255, 255);
     ellipse((m++)%width,(n+=6)%width,5,5);
   }
