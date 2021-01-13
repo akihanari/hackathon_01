@@ -10,7 +10,7 @@ function setup() {
   // window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
   // window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
 
-  let c = createCanvas(windowWidth, windowHeight - 100);
+  createCanvas(windowWidth, windowHeight - 50);
 
   background(0);
 
@@ -88,7 +88,9 @@ function deviceShaken() {
   // }
   let m = random(0,windowWidth);
   let n = random(0,windowHeight);
-  ellipse((m++)%width,(n+=6)%width,5,5);
+  for (k=0; k< windowHeight; k++){
+    ellipse((m++)%width,(n+=6)%width,5,5);
+  }
 }
 
 function saveme() {
