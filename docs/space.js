@@ -76,23 +76,14 @@ function draw() {
 }
 
 //スマホを振る
-// let value = 0;
-// function draw() {
-//   fill(value);
-//   rect(25, 25, 50, 50);
-// }
 function deviceShaken() {
-  // value = value + 5;
-  // if (value > 255) {
-  //   value = 0;
+  // let m = 50;
+  // let n = 200;
+  // for (k=0; k< windowHeight; k++){
+  //   background(225);
+  //   fill(255, 255, 255);
+  //   ellipse((m++)%width,(n+=6)%width,5,5);
   // }
-  let m = 50;
-  let n = 200;
-  for (k=0; k< windowHeight; k++){
-    background(225);
-    fill(255, 255, 255);
-    ellipse((m++)%width,(n+=6)%width,5,5);
-  }
 }
 
 function saveme() {
