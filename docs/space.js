@@ -2,22 +2,18 @@ let x,y;
 let w;
 let img;
 let h,s,b;
-let button;
-let button2;
-//let count = 0;
-//let fr = 30; //fps
+let button,button2,button3;
 
 
 function setup() {
 //   createCanvas(400,400);
+  window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
+  window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
 
   let c = createCanvas(windowWidth, windowHeight);
 
-//   background(0,4,51);
   background(0);
 
-  //framerate(fr);
-//   stroke(250);
   for (i=1; i<300; i++){
     blendMode(SCREEN);
     colorMode(HSB);
@@ -27,10 +23,6 @@ function setup() {
     x = random(0,windowWidth);
     y = random(0,windowHeight);
     w = random(0,5);
-    // drawingContext.shadowBlur = 25;
-    // drawingContext.shadowOffsetX = 0;
-    // drawingContext.shadowOffsetY = 0;
-    // drawingContext.shadowColor = color(240,240,255);
 
     for (j = 1; j < 5; ++j) {
         strokeWeight(j);
@@ -43,26 +35,60 @@ function setup() {
         ellipse(x, y, w);
       }
 
-  }
+    }
   blendMode(BLEND);
   colorMode(RGB);
 
-  loadImage('images/cat02.png', img => {
+  loadImage('images/cat.png', img => {
     image(img, 0,windowHeight - 406);
   });
 
-//   filter(BLUR, 0);
   button = createButton("Save");
+  button.style("width", "50px");
+  button.style("height", "50px");
+  button.style("border-radius", "25px");
+  button.style("color", "#ffffff");
+  button.style("background", "#00ce14");
   button.mousePressed(saveme);
+
   button2 = createButton("Tweet");
+  button2.style("width", "50px");
+  button2.style("height", "50px");
+  button2.style("border-radius", "25px");
+  button2.style("color", "#ffffff");
+  button2.style("background", "#00acee");
   button2.mousePressed(tweetme);
+
+  button3 = createButton("Clear");
+  button3.style("width", "50px");
+  button3.style("height", "50px");
+  button3.style("border-radius", "25px");
+  button3.style("color", "#ffffff");
+  button3.style("background", "#cc0000");
+  button3.mousePressed(clearme);
 }
 
 function draw() {
-    // if (button.mousePressed()) {
-    //     saveCanvas('spacecat');
-    //   }
-    // button.mousePressed(saveCanvas('spacecat'));
+  noStroke();
+  if(mouseIsPressed){
+    ellipse(mouseX, mouseY, 10);
+  }
+}
+
+//スマホを振る
+// let value = 0;
+// function draw() {
+//   fill(value);
+//   rect(25, 25, 50, 50);
+// }
+function deviceShaken() {
+  // value = value + 5;
+  // if (value > 255) {
+  //   value = 0;
+  // }
+  let m = random(0,windowWidth);
+  let n = random(0,windowHeight);
+  ellipse((m++)%width,(n+=6)%width,5,5);
 }
 
 function saveme() {
@@ -70,9 +96,13 @@ function saveme() {
 }
 
 function tweetme() {
-    link("https://twitter.com/share?ref_src=twsrc%5Etfw");
+  link("https://twitter.com/share?ref_src=twsrc%5Etfw");
+}
+
+function clearme() {
+  link("index.html");
 }
 
 function link(url, winName, options) {
-    winName && open(url, winName, options) || (location = url);
-  }
+  winName && open(url, winName, options) || (location = url);
+}
