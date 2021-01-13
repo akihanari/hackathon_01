@@ -7,10 +7,10 @@ let button,button2,button3;
 
 function setup() {
 //   createCanvas(400,400);
-  window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
-  window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
+  // window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
+  // window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
 
-  let c = createCanvas(windowWidth, windowHeight - 50);
+  let c = createCanvas(windowWidth, windowHeight - 100);
 
   background(0);
 
