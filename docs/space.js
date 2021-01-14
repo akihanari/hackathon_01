@@ -2,18 +2,14 @@ let x,y;
 let w;
 let img;
 let h,s,b;
-let button,button2,button3;
+let button,button2,button3,button4;
 
 
 function setup() {
-  // window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
-  // window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
-
   createCanvas(windowWidth, windowHeight - 50);
-
   background(0);
 
-  for (i=1; i<300; i++){
+  for (i = 1; i < 300; i++){
     blendMode(SCREEN);
     colorMode(HSB);
     h = random(100,360);
@@ -38,7 +34,7 @@ function setup() {
   blendMode(BLEND);
   colorMode(RGB);
 
-  loadImage('images/0103.png', img => {
+  loadImage('images/cat.png', img => {
     image(img, 0,windowHeight - 406);
   });
 
@@ -65,6 +61,10 @@ function setup() {
   button3.style("color", "#ffffff");
   button3.style("background", "#cc0000");
   button3.mousePressed(clearme);
+
+  button4 = createButton("©︎choco_py3");
+  button4.style("color", "#ffffff");
+  button4.mousePressed(chocopyme);
 }
 
 function draw() {
@@ -72,17 +72,6 @@ function draw() {
   if(mouseIsPressed){
     ellipse(mouseX, mouseY, 10);
   }
-}
-
-//スマホを振る
-function deviceShaken() {
-  // let m = 50;
-  // let n = 200;
-  // for (k=0; k< windowHeight; k++){
-  //   background(225);
-  //   fill(255, 255, 255);
-  //   ellipse((m++)%width,(n+=6)%width,5,5);
-  // }
 }
 
 function saveme() {
@@ -95,6 +84,10 @@ function tweetme() {
 
 function clearme() {
   link("index.html");
+}
+
+function chocopyme() {
+  link("https://twitter.com/choco_py3");
 }
 
 function link(url, winName, options) {
