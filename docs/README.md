@@ -1,4 +1,4 @@
-# 作品タイトル「Space Cat Love!」
+# 作品タイトル「Space Cat Love!」@choco_py3
 
 # 作品テーマ「遊び心」
 + 遊び心のあるWebアプリを作成しました。
@@ -12,6 +12,7 @@
 + お絵かきした画像の保存機能
 + Twitterシェア機能
 + 画面のクリア（リロード）機能
+![spacecat (3)](https://user-images.githubusercontent.com/56893583/104579115-e747dc80-569e-11eb-8886-aee2ee4886cb.png)
 
 # 使用技術
 + HTML5
