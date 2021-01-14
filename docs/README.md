@@ -24,6 +24,7 @@
 + レスポンシブになるようなデザインにした
 + 星をぼんやり光らせる/表示される星空をランダムに生成するようにした
 + Twitterカードに対応させた
+<img width="1164" alt="scs" src="https://user-images.githubusercontent.com/56893583/104579468-59202600-569f-11eb-9e71-041d8a345921.png">
 
 # 参考リンク
 + [ぼんやり光る効果を出す簡単な方法 その2 : Processing Tips](https://note.com/deconbatch/n/nadd699e04580)
