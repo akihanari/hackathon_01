@@ -19,7 +19,7 @@
 + HTML5
 + CSS3
 + p5.js(Processing)
-+ github.io
++ GitHub Pages
 
 # 工夫した点
 + レスポンシブになるようなデザインにした
